@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/assets/images/zlogo-01.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/zlogo-01.png" />
+
+
+
+   <!--    <link href="%PUBLIC_URL%/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+      <link href="%PUBLIC_URL%/assets/css/font-awesome.min.css" rel="stylesheet">
+      <link href="%PUBLIC_URL%/assets/css/animate.css" rel="stylesheet">
+        <link href="%PUBLIC_URL%/assets/css/owl.carousel.css" rel="stylesheet">
+        <link href="%PUBLIC_URL%/assets/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+        <link href="%PUBLIC_URL%/assets/css/style.css" rel="stylesheet">
+        <link href="%PUBLIC_URL%/assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/colors/main.css" id="colors">
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+   
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>MY Portfolio App</title>
+  </head>
+  <style type="text/css">
+    
+  
+  </style>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+     <div id="loading"  >
+            <img src="%PUBLIC_URL%/assets/images/loading.gif" alt="loading">
+        </div>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+        <!-- Javascript Files
+            ================================================== -->
+        <script src="%PUBLIC_URL%/assets/js/jquery.min.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/bootstrap.min.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/typed.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/jquery.easy-pie-chart.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/owl.carousel.min.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/wow.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="%PUBLIC_URL%/assets/js/jquery.isotope.js"></script>  
+        <script src="%PUBLIC_URL%/assets/js/materialize.min.js"></script>  
+        <script src="%PUBLIC_URL%/https://maps.googleapis.com/maps/api/js?key=AIzaSyBkdsK7PWcojsO-o_q2tmFOLBfPGL8k8Vg"></script>
+        <script type="text/javascript" src="%PUBLIC_URL%/assets/js/gmap3.js"></script>
+        <script type="text/javascript">
+                                    new WOW().init();
+                                    function initialize() {
+                                        var mapOptions = {
+                                            center: new google.maps.LatLng(-37.817283, 144.955763),
+                                            zoom: 15,
+                                            zoomControl: false,
+                                            scaleControl: false,
+                                            scrollwheel: false,
+                                            disableDoubleClickZoom: true,
+                                        };
+
+                                        var map = new google.maps.Map(document.getElementById('map'),
+                                                mapOptions);
+
+                                        var marker = new google.maps.Marker({
+                                            map: map,
+                                            position: map.getCenter()
+                                        });
+                                        var infowindow = new google.maps.InfoWindow();
+                                        infowindow.setContent('<img src="%PUBLIC_URL%/assets/images/map.png" alt="image" />');
+                                        google.maps.event.addListener(marker, 'load', function () {
+                                            infowindow.open(map, marker);
+                                        });
+                                        infowindow.open(map, marker);
+                                    }
+
+                                    google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <script src="%PUBLIC_URL%/assets/js/script.js"></script> 
+
+        <!-- Style Switcher
+================================================== -->
+        <script src="%PUBLIC_URL%/assets/js/switcher.js"></script>
+
+
+        <!-- Style Switcher / End -->
+
+
+
+  </body>
+</html>
